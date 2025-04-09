@@ -18,7 +18,7 @@ function displayPlayerName() {
 }
 
 function switchPlayer() {
-    playerName = (playerName == PLAYER_X) ? PLAYER_O : PLAYER_X;
+    playerName = (playerName === PLAYER_X) ? PLAYER_O : PLAYER_X;
     displayPlayerName();
 }
 
@@ -26,17 +26,17 @@ function init() {
     playerName = PLAYER_X;
     displayPlayerName();
     let boardHtml = "";
-    
+
     for (let ix = 0; ix < 3; ix++) {
         boardHtml += "<tr>";
-    
+
         for (let jx = 0; jx < 3; jx++) {
             boardHtml += makeColumnHtml(`${ix}_${jx}`, "_");
         }
-        
+
         boardHtml += "</tr>";
     }
-    
+
     board.innerHTML = boardHtml;
 }
 
