@@ -1,4 +1,5 @@
 # tictactoe.js
+return `<td id="${id}" onclick="cellClick(this)">[${marker}]</td>`;
 const PLAYER_X = "X";
 const PLAYER_O = "O";
 const board = document.getElementById("board");
